@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-12-21 21:53:51 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="po.Parttimejob" table="parttimejob" catalog="peoplemanagement">
+        <id name="jobNo" type="int">
+            <column name="JobNo" />
+            <generator class="increment" />
+        </id>
+        <property name="teacherId" type="string">
+            <column name="TeacherID" length="15" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="Name" length="30" not-null="true" />
+        </property>
+        <property name="startTime" type="date">
+            <column name="StartTime" length="19" not-null="true" />
+        </property>
+        <property name="overTime" type="date">
+            <column name="OverTime" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

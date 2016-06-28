@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-12-21 21:53:51 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="po.Teacher" table="teacher" catalog="peoplemanagement">
+        <id name="teacherId" type="string">
+            <column name="TeacherID" length="15" />
+            <generator class="assigned" />
+        </id>
+        <property name="birthdate" type="date">
+            <column name="Birthdate" length="19" not-null="true" />
+        </property>
+        <property name="polity" type="string">
+            <column name="Polity" length="12" not-null="true" />
+        </property>
+        <property name="hometown" type="string">
+            <column name="Hometown" length="40" not-null="true" />
+        </property>
+        <property name="nation" type="string">
+            <column name="Nation" length="10" not-null="true" />
+        </property>
+        <property name="identity" type="string">
+            <column name="Identity" length="18" not-null="true" />
+        </property>
+        <property name="post" type="string">
+            <column name="Post" length="20" />
+        </property>
+        <property name="techPost" type="string">
+            <column name="TechPost" length="20" />
+        </property>
+        <property name="workAddress" type="string">
+            <column name="WorkAddress" length="40" />
+        </property>
+        <property name="telephone" type="string">
+            <column name="Telephone" length="11" />
+        </property>
+        <property name="firstMail" type="string">
+            <column name="FirstMail" length="40" not-null="true" />
+        </property>
+        <property name="secondMail" type="string">
+            <column name="SecondMail" length="40" />
+        </property>
+        <property name="thirdMail" type="string">
+            <column name="ThirdMail" length="40" />
+        </property>
+        <property name="mobile" type="string">
+            <column name="Mobile" length="11" />
+        </property>
+        <property name="mailAddress" type="string">
+            <column name="MailAddress" length="40" />
+        </property>
+        <property name="direction" type="string">
+            <column name="Direction" length="20" not-null="true" />
+        </property>
+        <property name="tutorType" type="string">
+            <column name="TutorType" length="10" />
+        </property>
+        <property name="postcode" type="string">
+            <column name="Postcode" length="6" not-null="true" />
+        </property>
+        <property name="teacherImg" type="string">
+            <column name="TeacherImg" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

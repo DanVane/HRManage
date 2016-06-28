@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-12-21 21:53:51 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="po.Reward" table="reward" catalog="peoplemanagement">
+        <id name="rewardNo" type="int">
+            <column name="RewardNo" />
+            <generator class="increment" />
+        </id>
+        <property name="paperId" type="string">
+            <column name="PaperID" length="10" not-null="true" />
+        </property>
+        <property name="teacherId" type="string">
+            <column name="TeacherID" length="15" not-null="true" />
+        </property>
+        <property name="keepSite" type="string">
+            <column name="KeepSite" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

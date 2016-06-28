@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-12-21 21:53:51 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="po.Manager" table="manager" catalog="peoplemanagement">
+        <id name="managerId" type="string">
+            <column name="ManagerID" length="15" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="20" not-null="true" />
+        </property>
+        <property name="college" type="string">
+            <column name="College" length="30" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="Password" length="32" not-null="true" />
+        </property>
+        <property name="isSuper" type="string">
+            <column name="IsSuper" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

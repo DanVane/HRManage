@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-12-21 21:53:51 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="po.Author" table="author" catalog="peoplemanagement">
+        <id name="authorNo" type="int">
+            <column name="AuthorNo" />
+            <generator class="increment" />
+        </id>
+        <property name="authorId" type="string">
+            <column name="AuthorID" length="15" not-null="true" />
+        </property>
+        <property name="paperId" type="string">
+            <column name="PaperID" length="15" not-null="true" />
+        </property>
+        <property name="authorName" type="string">
+            <column name="AuthorName" length="20" not-null="true" />
+        </property>
+        <property name="organization" type="string">
+            <column name="Organization" length="50" not-null="true" />
+        </property>
+        <property name="post" type="string">
+            <column name="Post" length="20" not-null="true" />
+        </property>
+        <property name="selfSchool" type="char">
+            <column name="SelfSchool" length="1" not-null="true" />
+        </property>
+        <property name="correspond" type="char">
+            <column name="Correspond" length="1" not-null="true" />
+        </property>
+        <property name="ranking" type="int">
+            <column name="Ranking" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

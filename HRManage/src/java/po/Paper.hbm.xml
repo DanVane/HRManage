@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-12-21 21:53:51 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="po.Paper" table="paper" catalog="peoplemanagement">
+        <id name="paperNo" type="string">
+            <column name="PaperNo" length="15" />
+            <generator class="assigned" />
+        </id>
+        <property name="authorId" type="string">
+            <column name="AuthorID" length="15" not-null="true" />
+        </property>
+        <property name="paperId" type="string">
+            <column name="PaperID" length="10" not-null="true" />
+        </property>
+        <property name="nameE" type="string">
+            <column name="NameE" length="60" not-null="true" />
+        </property>
+        <property name="nameC" type="string">
+            <column name="NameC" length="60" not-null="true" />
+        </property>
+        <property name="paperType" type="string">
+            <column name="PaperType" length="10" not-null="true" />
+        </property>
+        <property name="periodicalE" type="string">
+            <column name="PeriodicalE" length="30" />
+        </property>
+        <property name="periodicalC" type="string">
+            <column name="PeriodicalC" length="30" />
+        </property>
+        <property name="meetingE" type="string">
+            <column name="MeetingE" length="40" />
+        </property>
+        <property name="mertingC" type="string">
+            <column name="MertingC" length="40" />
+        </property>
+        <property name="typeOne" type="string">
+            <column name="TypeOne" length="10" />
+        </property>
+        <property name="typeTwo" type="string">
+            <column name="TypeTwo" length="10" />
+        </property>
+        <property name="issnIsbn" type="string">
+            <column name="ISSN_ISBN" length="20" />
+        </property>
+        <property name="cn" type="string">
+            <column name="CN" length="20" />
+        </property>
+        <property name="publicTime" type="date">
+            <column name="PublicTime" length="19" not-null="true" />
+        </property>
+        <property name="reel" type="java.lang.Integer">
+            <column name="Reel" />
+        </property>
+        <property name="issue" type="java.lang.Integer">
+            <column name="Issue" />
+        </property>
+        <property name="startP" type="java.lang.Integer">
+            <column name="StartP" />
+        </property>
+        <property name="overP" type="java.lang.Integer">
+            <column name="OverP" />
+        </property>
+        <property name="location" type="string">
+            <column name="Location" length="40" />
+        </property>
+        <property name="organization" type="string">
+            <column name="Organization" length="40" />
+        </property>
+        <property name="description" type="string">
+            <column name="Description" length="300" />
+        </property>
+        <property name="selfNo" type="int">
+            <column name="SelfNo" not-null="true" />
+        </property>
+        <property name="otherNo" type="int">
+            <column name="OtherNo" not-null="true" />
+        </property>
+        <property name="esi" type="java.lang.Character">
+            <column name="ESI" length="1" />
+        </property>
+        <property name="state" type="string">
+            <column name="State" length="10" />
+        </property>
+        <property name="accesory" type="string">
+            <column name="Accesory" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

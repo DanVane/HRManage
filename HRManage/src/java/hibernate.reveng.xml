@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="peoplemanagement"/>
+  <table-filter match-name="paper"/>
+  <table-filter match-name="teacher"/>
+  <table-filter match-name="manager"/>
+  <table-filter match-name="degrees"/>
+  <table-filter match-name="author"/>
+  <table-filter match-name="tsbelong"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="honor"/>
+  <table-filter match-name="reward"/>
+  <table-filter match-name="workexprience"/>
+  <table-filter match-name="parttimejob"/>
+  <table-filter match-name="subject"/>
+</hibernate-reverse-engineering>

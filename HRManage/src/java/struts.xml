@@ -1,0 +1,289 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <include file="example.xml"/>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="userLoginAction" class="LoginAction" method="loginCheck">
+             <result name="fail">/firstJsp/userLogin.jsp</result>
+             <result name="success" type="redirect">/firstJsp/index.jsp</result>
+        </action>
+        
+        <action name="managerLoginAction" class="LoginAction" method="managerLoginCheck">
+            <result name="fail">/firstJsp/managerLogin.jsp</result>
+             <result name="success" type="redirect">/firstJsp/index.jsp</result>
+	</action>
+        
+        <action name="lockReturnAction" class="LoginAction" method="lockReturnCheck">
+            <result name="fail">/iframebao/lock.jsp</result>
+             <result name="success" type="redirect">/firstJsp/index.jsp</result>
+	</action>
+        
+        <action name="exitAction" class="LoginAction" method="exitAction">
+            <result name="success" type="redirect">/firstJsp/userLogin.jsp</result>
+            <result name="fail">/iframebao/404.jsp</result>
+        </action>
+        
+        <action name="teacherCheckAction" class="AllTeacherAction" method="teacherCheck">
+            <result name="success" type="redirect">/iframebao/jibenxinxiiframe.jsp</result>
+            <result name="fail">/iframebao/jibenxinxiiframe.jsp </result>
+        </action>
+        
+        
+        <action name="updateUserOwnInfoAction" class="AllTeacherAction" method="updateUserOwnInfo">
+            <result name="success" type="redirect">/iframebao/jibenxinxiiframe.jsp</result>
+            <result name="fail">/iframebao/jibenxinxiiframe.jsp </result>
+        </action>
+        
+        <action name="findHonorsByTeacherIdAction" class="AllTeacherAction" method="findHonorsByTeacherId">
+            <result name="success" type="redirect">/iframebao/rongyuiframe.jsp</result>
+        </action>
+        
+        <action name="addNewHonorAction" class="AllTeacherAction" method="addNewHonor">
+            <result name="success" type="redirect">/iframebao/rongyuiframe.jsp</result>
+        </action>
+        
+        <action name="updatePHonor" class="AllTeacherAction" method="updatePHonor">
+            <result name="success" type="redirect">/iframebao/xiugairongyuxinxiiframe.jsp </result>
+        </action>
+        
+        <action name="updateHonor" class="AllTeacherAction" method="updateHonor">
+            <result name="success" type="redirect">/iframebao/rongyuiframe.jsp </result>
+        </action>
+        
+        <action name="removeHonor" class="AllTeacherAction" method="removeHonor">
+            <result name="success" type="redirect">/iframebao/rongyuiframe.jsp</result>
+        </action>
+        
+        <action name="findPartJobsByTeacherIdAction" class="AllTeacherAction" method="findPartJobsByTeacherId">
+            <result name="success" type="redirect">/iframebao/xueshuiframe.jsp</result>
+        </action>
+        
+        <action name="addNewJobAction" class="AllTeacherAction" method="addNewJob">
+            <result name="success" type="redirect">/iframebao/xueshuiframe.jsp</result>
+        </action>
+        
+        <action name="removeJob" class="AllTeacherAction" method="removeJob">
+            <result name="success" type="redirect">/iframebao/xueshuiframe.jsp</result>
+        </action>
+        
+        <action name="updatePJob" class="AllTeacherAction" method="updatePJob">
+            <result name="success" type="redirect">/iframebao/xiugaixueshuxinxiiframe.jsp </result>
+        </action>
+        
+        <action name="updateJob" class="AllTeacherAction" method="updateJob">
+            <result name="success" type="redirect">/iframebao/xueshuiframe.jsp </result>
+        </action>
+        
+        <action name="findWorkssByTeacherIdAction" class="AllTeacherAction" method="findWorksByTeacherId">
+            <result name="success" type="redirect">/iframebao/gongzuoiframe.jsp</result>
+        </action>
+        
+        <action name="addNewWorkAction" class="AllTeacherAction" method="addNewWork">
+            <result name="success" type="redirect">/iframebao/gongzuoiframe.jsp</result>
+        </action>
+        
+        <action name="removeWork" class="AllTeacherAction" method="removeWork">
+            <result name="success" type="redirect">/iframebao/gongzuoiframe.jsp</result>
+        </action>
+        
+        <action name="updatePWork" class="AllTeacherAction" method="updatePWork">
+            <result name="success" type="redirect">/iframebao/xiugaigongzuoxinxiiframe.jsp </result>
+        </action>
+        
+        <action name="updateWork" class="AllTeacherAction" method="updateWork">
+            <result name="success" type="redirect">/iframebao/gongzuoiframe.jsp </result>
+        </action>
+        
+        <action name="findDegreesByTeacherIdAction" class="AllTeacherAction" method="findDegreesByTeacherId">
+            <result name="success" type="redirect">/iframebao/xueweiiframe.jsp</result>
+        </action>
+        
+        <action name="addNewDegreeAction" class="AllTeacherAction" method="addNewDegree">
+            <result name="success" type="redirect">/iframebao/xueweiiframe.jsp</result>
+        </action>
+        
+        <action name="removeDegree" class="AllTeacherAction" method="removeDegree">
+            <result name="success" type="redirect">/iframebao/xueweiiframe.jsp</result>
+        </action>
+        
+        <action name="updatePDegree" class="AllTeacherAction" method="updatePDegree">
+            <result name="success" type="redirect">/iframebao/xiugaixueweixinxiiframe.jsp </result>
+        </action>
+        
+        <action name="updateDegree" class="AllTeacherAction" method="updateDegree">
+            <result name="success" type="redirect">/iframebao/xueweiiframe.jsp </result>
+        </action>
+        
+        <action name="findAllPapersByTeacherId" class="AllTeacherAction" method="reportP">
+            <result name="success" type="redirect">/iframebao/reportPiframe.jsp </result>
+        </action>
+        
+        <action name="reportAction" class="AllTeacherAction" method="report">
+            <result name="success" type="redirect">/iframebao/reportiframe.jsp </result>
+        </action>
+        
+        <action name="updatePasswordAction" class="UpdatePasswordAction" method="updatePassword">
+            <result name="success" type="redirect">/iframebao/xiugaimima.jsp </result>
+            <result name="fail">/iframebao/xiugaimima.jsp </result>
+        </action>
+        
+        <action name="updatePUser" class="AllUserAction" method="updatePUser">
+            <result name="success" type="redirect">/iframebao/xiugaiyonghuxinxiiframe.jsp </result>
+        </action>
+        
+        <action name="updateUser" class="AllUserAction" method="updateUser">
+            <result name="success" type="redirect">/iframebao/yonghuiframe.jsp </result>
+        </action>
+        
+        <action name="resetUserPassword" class="UpdatePasswordAction" method="resetUserPassword">
+            <result name="success" type="redirect">/iframebao/yonghuiframe.jsp</result>
+            <result name="fail">/iframebao/yonghuiframe.jsp </result>
+        </action>
+        
+        <action name="addNewUserAction" class="AllUserAction" method="AddNewUser">
+              <result name="success" type="redirect">/iframebao/yonghuiframe.jsp</result>
+        </action>
+        
+        <action name="removeUser" class="RemoveUserAction">
+              <result name="success" type="redirect">/iframebao/yonghuiframe.jsp</result>
+        </action>
+        
+        <action name="findUsersByCollegeAction" class="AllUserAction" method="ListUserByCollege">
+              <result name="fail">/iframebao/yonghuiframe.jsp</result>
+              <result name="success" type="redirect">/iframebao/yonghuiframe.jsp</result>
+        </action>
+        
+        <action name="findAllUsers" class="AllUserAction" method="ListAllUsers">
+              <result name="fail">/iframebao/yonghuiframe.jsp</result>
+              <result name="success" type="redirect">/iframebao/yonghuiframe.jsp</result>
+        </action>
+        
+        <action name="importUserAction" class="AllUserAction" method="importUser">
+            <result>/iframebao/daoruiframe.jsp</result>
+             <!-- 避免重复提交 
+               <interceptor-ref name="token">
+                   <param name="includeMethods">ShowBoat</param>
+               </interceptor-ref>-->
+               <!-- 文件上传 -->
+               <interceptor-ref name="fileUpload">
+                <param name="maximumSize">1024*1024</param>
+                <param name="allowedExtensions">xls,xlsx</param>
+            </interceptor-ref>
+               <interceptor-ref name="defaultStack"></interceptor-ref>
+         </action>
+         
+         <action name="intoDBAction" class="AllUserAction" method="intoDB">
+            <result name="success" type="redirect">/iframebao/yonghuiframe.jsp </result>
+        </action>
+        
+        <action name="resetPasswordAction" class="UpdatePasswordAction" method="resetPassword">
+            <result name="success" type="redirect">/firstJsp/userLogin.jsp</result>
+            <result name="fail">/firstJsp/userLogin.jsp </result>
+        </action>
+        
+        
+        <action name="addNewManager" class="AllManagerAction" method="AddNewManager">
+              <result name="success" type="redirect">/iframebao/suoyouguanliyuaniframe.jsp</result>
+        </action>
+         
+        <action name="findAllManagers" class="AllManagerAction" method="ListManagers">
+              <result name="fail">/xitong.jsp</result>
+              <result name="success" type="redirect">/iframebao/suoyouguanliyuaniframe.jsp</result>
+        </action>
+        
+        <action name="updateManager" class="AllManagerAction" method="updateManager">
+              <result name="fail">/iframebao/updateMangerInfoiframe.jsp</result>
+              <result name="success" type="redirect">/iframebao/suoyouguanliyuaniframe.jsp</result>
+        </action>
+
+        <action name="updateManagerPasswordAction" class="UpdatePasswordAction" method="updateManagerPassword">
+            <result name="success" type="redirect">/iframebao/xiugaimimaiframe.jsp </result>
+            <result name="fail">/iframebao/xiugaimimaiframe.jsp </result>
+        </action>
+        
+        <action name="updatemanagerInfoAction" class="AllManagerAction" method="updatePManagerInfo">
+            <result name="success" type="redirect">/iframebao/updateMangerInfoiframe.jsp </result>
+        </action>
+        
+        <action name="generateUserExcel" class="GenerateExcelAction">
+            <result name="success" type="stream">
+		<param name="contentType">application/vnd.ms-excel</param>
+		<param name="contentDisposition">attachment;filename="UserDownload.xls"</param>
+		<param name="inputName">yonghuInputStream</param>
+            </result>
+	</action>
+        
+         <action name="saveAsWordAction" class="SaveAsWordAction" >
+            <result name="success" type="stream">
+                <param name="contentType">application/msword</param>
+		<param name="contentDisposition">attachment;filename="YourDownload.doc"</param>
+		<param name="inputName">downloadFile</param>
+            </result>
+        </action>
+        
+        <action name="generateXueweiExcel" class="GenerateExcelAction">
+            <result name="success" type="stream">
+		<param name="contentType">application/vnd.ms-excel</param>
+		<param name="contentDisposition">attachment;filename="XueweiDownload.xls"</param>
+		<param name="inputName">xueweiInputStream</param>
+            </result>
+	</action>
+        
+        <action name="generateXueshuExcel" class="GenerateExcelAction">
+            <result name="success" type="stream">
+		<param name="contentType">application/vnd.ms-excel</param>
+		<param name="contentDisposition">attachment;filename="XueshuDownload.xls"</param>
+		<param name="inputName">xueshuInputStream</param>
+            </result>
+	</action>
+        
+        <action name="generateRongyuExcel" class="GenerateExcelAction">
+            <result name="success" type="stream">
+		<param name="contentType">application/vnd.ms-excel</param>
+		<param name="contentDisposition">attachment;filename="RongyuDownload.xls"</param>
+		<param name="inputName">rongyuInputStream</param>
+            </result>
+	</action>
+        
+        <action name="generateGongzuoExcel" class="GenerateExcelAction">
+            <result name="success" type="stream">
+		<param name="contentType">application/vnd.ms-excel</param>
+		<param name="contentDisposition">attachment;filename="GongzuoDownload.xls"</param>
+		<param name="inputName">gongzuoInputStream</param>
+            </result>
+	</action>
+        
+        <action name="generateManagerExcel" class="GenerateExcelAction">
+            <result name="success" type="stream">
+		<param name="contentType">application/vnd.ms-excel</param>
+		<param name="contentDisposition">attachment;filename="ManagerDownload.xls"</param>
+		<param name="inputName">guanliyuanInputStream</param>
+            </result>
+	</action>
+        
+         <action name="resetManagerPassword" class="UpdatePasswordAction" method="resetManagerPassword">
+            <result name="success" type="redirect">/iframebao/suoyouguanliyuaniframe.jsp</result>
+            <result name="fail">/iframebao/suoyouguanliyuaniframe.jsp </result>
+        </action>
+        
+        <action name="changeToUser" class="AllUserAction" method="changeToUser">
+            <result name="success" type="redirect">/firstJsp/index.jsp </result>
+        </action>
+        
+        <action name="changeToManager" class="AllManagerAction" method="changeToManager">
+            <result name="success" type="redirect">/firstJsp/index.jsp </result>
+        </action>
+        
+        <action name="findTsbelongByTeacherIdAction" class="AllTeacherAction" method="findTsbelongByTeacherId">
+            <result name="success" type="redirect">/iframebao/lishuiframe.jsp</result>
+        </action>
+        
+        <action name="updateTsbelong" class="AllTeacherAction" method="updateTsbelong">
+            <result name="success" type="redirect">/iframebao/lishuiframe.jsp </result>
+        </action>
+        
+    </package>
+</struts>
